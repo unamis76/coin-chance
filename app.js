@@ -70,7 +70,7 @@ if (config.SSL_ENABLED) {
 if (config.SRC_LINK === "") {
     // delete src/public/dist/dist.tar.gz
     try {
-        fs.unlinkSync('src/public/dist/dist.tar.gz');
+        fs.unlinkSync('/home/coinchance/coin-chance/src/public/dist/dist.tar.gz');
     } catch (err) {
         // dist doesn't already exist. Not an error.
     }
@@ -84,11 +84,11 @@ if (config.SRC_LINK === "") {
             //.pipe(fstream.Writer({ 'path': tmpPath }))
             .pipe(fs.createWriteStream(tmpPath))
             .on('finish', function() {
-                // Move the zip to src/public/dist/dist.tar.gz
-                var dest = "src/public/dist/dist.tar.gz";
+                // Move the zip to /home/coinchance/coin-chance/src/public/dist/dist.tar.gz
+                var dest = "/home/coinchance/coin-chance/src/public/dist/dist.tar.gz";
                 console.info("Source zipped. Moving to <%s>", dest);
                 fstream.Reader({ 'path': tmpPath})
-                    //.pipe(fstream.Writer({ 'path': 'src/public/dist/dist.tar.gz' }))
+                    //.pipe(fstream.Writer({ 'path': '/home/coinchance/coin-chance/src/public/dist/dist.tar.gz' }))
                     .pipe(fs.createWriteStream(dest))
                     .on('finish', function () {
                         startApp();
@@ -160,10 +160,10 @@ function startApp() {
         sock.io = require('socket.io').listen(server);
     }
     
-    sock.io.set('log level', 1);
-    sock.io.set('browser client minification', true);
-    sock.io.set('browser client etag', true);
-    sock.io.set('browser client gzip', true);
+    //sock.io.set('log level', 1);
+    //sock.io.set('browser client minification', true);
+    //sock.io.set('browser client etag', true);
+    //sock.io.set('browser client gzip', true);
 
     sock.io.sockets.on('connection', sock.onconnect);
     sock.io.set('authorization', function (handshakeData, accept) {
