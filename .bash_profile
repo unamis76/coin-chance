@@ -1,0 +1,9 @@
+# /home/coinchance/.bash_profile 
+export COIN_CHANCE_CONNSTR=mongodb://localhost/test 
+export COIN_CHANCE_SSLKEY=/path/to/ssl.key  
+export COIN_CHANCE_SSLCERT=/path/to/ssl.crt 
+export COIN_CHANCE_COOKIESECRET=my_cookie_secret 
+export COIN_CHANCE_RPCPORT=13106 
+export COIN_CHANCE_RPCHOST=localhost 
+export COIN_CHANCE_RPCUSER=coinchance 
+export COIN_CHANCE_RPCPASSWORD=coinchance1
