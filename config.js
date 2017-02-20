@@ -52,7 +52,7 @@ exports.SOCKETIOPORT = 4000;
 exports.LISTENPORT = 3000;
 
 // Enable/disable SSL (Turning off is not good security!)
-exports.SSL_ENABLED = true;
+exports.SSL_ENABLED = false;
 
 // SSL files
 exports.SSLKEY = process.env.COIN_CHANCE_SSLKEY; // '/path/to/ssl.key' 
@@ -87,8 +87,8 @@ exports.HOUSE_EDGE = BigNumber(0.01);
 exports.HOUSE_MAX_USER_PROFIT_PORTION_OF_BANKROLL = exports.HOUSE_EDGE;
 
 exports.MIN_DEPOSIT_CONFIRMATIONS = 3;
-exports.COIN_NETWORK_FEE = BigNumber(0.00050000);
-exports.TOTAL_WITHDRAW_FEE = BigNumber(0.00100000);
+exports.COIN_NETWORK_FEE = BigNumber(0.01000000);
+exports.TOTAL_WITHDRAW_FEE = BigNumber(0.01000000);
 
 exports.MAX_WITHDRAW_AMOUNT = BigNumber("10");
 
